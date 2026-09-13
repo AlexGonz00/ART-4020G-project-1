@@ -2,11 +2,35 @@
   box-sizing: border-box;
 }
 
+/* declaring variables */
+:root {
+  --paper: #F8EFC5;
+  --grid-line: rgba(178, 148, 40, .28);
+  --grid-cell: 26px;
+}
+
 body {
+  /* Background */
   color: #17201a;
   font-family: system-ui, sans-serif;
   line-height: 1.6;
   margin: 0;
+}
+
+h1 {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 900;
+}
+
+h2 {
+  font-weight: 900;
+}
+
+.page-background {
+  position: relative;
+  background-color: var(--paper);
+  background-image: linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+  background-size: var(--grid-cell) var(--grid-cell);
 }
 
 .page {
