@@ -29,10 +29,12 @@ h2 {
 }
 
 p {
+  font-weight: 400;
   font-size: 24px;
 }
 
 li {
+  font-weight: 400;
   font-size: 24px;
 }
 
@@ -81,7 +83,7 @@ li {
 
 /* Make one column larger than the other */
 .col:first-child {
-  flex: 2 1 0;
+  flex: 1 1 0;
 }
 
 .col:last-child {
@@ -93,13 +95,25 @@ img {
   max-width: 100%;
 }
 
+.img-link {
+  display: block;
+}
+
 .img-keyboard-display {
   display: block;
-  width: 240px;
+  width: 100%;
   margin-bottom: 16px;
+  border-color: black;
 }
 
 .box-shadow {
   border: 2.5px solid black;
   box-shadow: 4px 4px 0 black;
+  transition: 0.3s ease;
+}
+
+.img-keyboard-display:hover .box-shadow {
+  border-color: #b3b3b3;
+  box-shadow: 4px 4px 0 #b3b3b3;
+  transform: scale(1.02);
 }
