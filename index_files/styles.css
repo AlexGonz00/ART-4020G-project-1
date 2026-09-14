@@ -20,10 +20,20 @@ body {
 h1 {
   font-family: "Archivo Black", sans-serif;
   font-weight: 900;
+  font-size: 32px;
 }
 
 h2 {
   font-weight: 900;
+  font-size: 24px;
+}
+
+p {
+  font-size: 24px;
+}
+
+li {
+  font-size: 24px;
 }
 
 .page-background {
@@ -58,7 +68,38 @@ h2 {
   padding: 2rem 1rem;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col {
+  /* Moves column down when screen size is too small */
+  flex: 1 1 400px;
+}
+
+/* Make one column larger than the other */
+.col:first-child {
+  flex: 2 1 0;
+}
+
+.col:last-child {
+  flex: 1 1 0;
+}
+
 img {
   display: block;
   max-width: 100%;
+}
+
+.img-keyboard-display {
+  display: block;
+  width: 240px;
+  margin-bottom: 16px;
+}
+
+.box-shadow {
+  border: 2.5px solid black;
+  box-shadow: 4px 4px 0 black;
 }
