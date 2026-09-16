@@ -28,23 +28,31 @@ h2 {
   font-size: 24px;
 }
 
+h3 {
+  margin-bottom: 0;
+}
+
 p {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 li {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
 }
 
-h3 {
+figure {
   color: rgb(0, 0, 0, 0.5);
   font-size: 16px;
 }
 
 a {
   text-decoration: none;
+}
+
+hr {
+  border-color: black;
 }
 
 .img-text {
@@ -83,7 +91,7 @@ a {
 .page {
   margin-inline: auto;
   max-width: 80%;
-  padding: 2rem 1rem;
+  padding-top: 1rem;
 }
 
 .container {
@@ -95,6 +103,10 @@ a {
 .col {
   /* Moves column down when screen size is too small */
   flex: 1 1 400px;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
 
 /* Make one column larger than the other */
@@ -118,11 +130,16 @@ img {
 .img-keyboard-display {
   display: block;
   width: 100%;
-  margin-bottom: 16px;
+  margin: 0 auto 16px auto;
   border-color: black;
+
+  /* hide purple link color */
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .box-shadow {
+  width: 100%;
   border: 2.5px solid black;
   box-shadow: 4px 4px 0 black;
   transition: 0.3s ease;
@@ -132,4 +149,29 @@ img {
   border-color: #b3b3b3;
   box-shadow: 4px 4px 0 #b3b3b3;
   transform: scale(1.02);
+}
+
+.item-desc {
+  margin-top: 0;
+}
+
+footer {
+  padding: 16px 32px;
+  text-align: right;
+}
+
+footer p {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Stuff when the screen is 1200 pixels or less */
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .col {
+    max-width: 100%;
+  }
 }
